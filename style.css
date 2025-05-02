@@ -1,0 +1,706 @@
+*{/*Todos elementos se ajustan al margen interno y externo del navegador*/
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(img/fondo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+section{
+    position: relative;
+    width: 100%;/*para que ocupe todo el ancho de la pantalla*/
+    min-height: 100vh;/*la altura mínima es para que se vea solo el 100% de la pantalla*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+}
+header{
+    font-family: "Architects Daughter", cursive;
+    font-weight: 1.4em;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    padding: 60px 100px;
+    display: flex;
+    justify-content: space-between;/*que no haya espacio entre ellos*/
+    align-items: center;
+}
+header .logo{
+    color: white;
+    font-size: 1.5em;/*Se pone em para que sea responsive*/
+    text-decoration: none;
+    text-transform: uppercase;/*que todas las letra se pongan en mayuscula*/
+    background: darkmagenta;
+    text-shadow: 0px 0px 5px black;
+    border-radius: 5px;
+    padding: 0 50px;
+    font-weight: 600;
+    box-shadow: 0px 10px 10px rgb(210, 187, 253) inset,
+                0px 5px 10px rgba(5, 5, 5, 0.212),
+                0px -10px 10px rgb(165, 2, 165) inset;
+}
+header .logo:hover{
+    color: black;
+    background: white;
+    transition: 1s;
+}
+header .navbar{
+    display: flex;
+}
+header .navbar li{/*para colocarlo como lista en linea*/
+    list-style: none;
+    margin-left: 30px; /*separo los elementos que están alineados*/
+}
+header .navbar li a{
+    text-decoration: none;
+    text-shadow: 7px 0px 5px black;
+    color: white;
+    font-weight: 600;
+    padding: 10px;
+    transition: 0.3s;
+    font-size: 0.9em;
+    text-transform: uppercase;
+}
+header .navbar li a:hover{
+    border-bottom: 5px solid darkmagenta;
+    padding: 2px;
+}
+footer .boxPaginaPpal{
+    position: relative;
+    max-width: 100%;
+    text-align: center;
+    padding-top: 3%;
+}
+footer .boxPaginaPpal a{
+    font-family: "Architects Daughter", cursive;
+    text-decoration: none;
+    text-transform: uppercase;   
+    color: darkmagenta;
+    background: white;
+    padding: 10px 20px;
+    margin: left 30px;
+    border-radius: 20px;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+footer .boxPaginaPpal a:hover{
+    color: white;
+    background: darkmagenta;
+    transition: 0.5s;
+}
+
+/*CONTENIDO LANDING PAGE PPAL*/
+.contenido{
+    font-family: "Architects Daughter", cursive;
+    font-size: 0.9em;
+    width: 100%;
+    display: flex;/*permite que la caja sea flexible*/
+    flex-wrap: wrap;/*hace como un acordeón para que cuando haga más pequeña la página, las cajas se adapten*/
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10%;
+}
+.contenido .tituloBox{
+    max-width: 100%;
+    text-align: center;
+    padding-top: 4%;
+}
+.contenido .tituloBox h2{
+    font-size: 4.5em;
+    text-transform: uppercase;
+    text-shadow: 7px 0px 5px black;
+    color: white;
+    margin-bottom: 2%;
+}
+.contenido .tituloBox h2 span{
+    background: darkmagenta;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    box-shadow: 0px 10px 10px rgb(210, 187, 253) inset,
+                0px 5px 10px rgba(5, 5, 5, 0.212),
+                0px -10px 10px darkmagenta inset;
+    padding: 0 50px;
+    text-shadow: 7px 0px 5px black;
+    font-weight: 600;
+}
+.contenido .tituloBox p{
+    font-size: 1.8em;
+    line-height: 1.5;
+    color: white;
+    text-shadow: 7px 0px 5px black;
+    font-weight: 300;
+    margin-top: 3%;
+    margin-bottom: 5%;
+}
+.contenido .tituloBox a{
+    text-decoration: none;
+    text-transform: uppercase;   
+    color: darkmagenta;
+    background: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+.contenido .tituloBox a:hover{
+    color: white;
+    background: darkmagenta;
+    transition: 0.5s;
+}
+.contenido .imgBox img{
+    height: 65vh;
+    transform: translateX(-100px); 
+} 
+/*COPYRIGHT*/
+.copyright{
+    font-family: "Architects Daughter", cursive;
+    position: absolute;
+    left: -2%;
+    margin-top: 40%;
+    display: flex;
+    flex-wrap: wrap;
+    text-shadow: 7px 0px 5px black;
+}
+.copyright p{
+
+    color: white;
+    text-align: center;
+    margin-left: 100px;
+}
+/*REDES SOCIALES*/
+.redesSociales{
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    top: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 100px 30px;
+    list-style: none;
+    flex-wrap: wrap;
+}
+.redesSociales li{
+    padding: 10px;
+}
+.redesSociales li a{
+    color: white;
+    font-size: 2.5em;
+    transition: 0.3s;
+}
+.redesSociales li:hover a{
+    color: rgb(45,3,74);
+}
+/*CIRCULO DE FONDO*/
+.circulo{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: rgba(2,112,108,0.386);
+    clip-path: circle(650px at right 800px);
+    width: 100%;
+    height: 100%;
+    z-index: -1000;
+}
+
+/**********************************************************************************************/
+/*FORMULARIO*/
+.texto-formulario{
+    font-family: "Architects Daughter", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: darkmagenta;
+    padding-top: 18px;
+    text-align: center;
+    font-size: 3em;
+}
+.contenedor-formulario{
+    width: 100%;
+    padding: 3%;
+    box-sizing: border-box;
+}
+.formulario{
+    background: white;
+    margin: 10%;
+}
+.icon{
+    padding-top: 4px;/*para que baje los iconos y se iguale a la altura de la caja*/
+    width: 35px;
+    height: 35px;
+    text-align: center;
+}
+input[type="text"], input[type="password"]{
+    text-align: center;
+    font-size: 18px;
+    width: 80%;
+    padding: 9px;
+    border: none;
+}
+.input-contenedor{
+    margin-bottom: 15px;
+    border: 1px solid #aaa;
+}
+.button{
+    font-family: "Architects Daughter", cursive;
+    border: none;
+    width: 100%;
+    font-size: 1.7em;
+    color: white;
+    background-color:darkmagenta;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer; /*para que salga la mano del cursor*/
+}
+.button:hover{
+    background-color:cornflowerblue;
+}
+.lista-contacto{ /*para los daots de contacto*/
+    margin-top: 1%;
+    text-align: center;
+    font-family: "Architects Daughter", cursive;
+    font-weight: 600;
+    font-size: 1em;
+    font-style: normal;
+    color: darkmagenta;
+}
+.lista-contacto a{
+    text-decoration: none;
+    color: rgb(12, 83, 128);
+    font-weight: 600;
+    margin-left: 1%;
+}
+
+/*la caja queda muy grande y aplicamos criterios responsive*/
+@media(min-width: 576px){
+    .formulario{
+        margin-top: 150px;
+        width: 500px;
+        margin: auto;
+        border-radius: 2%;
+    }
+}
+
+/**************************************************************************************************/
+/*PROYECTOS*/
+.texto-contenedor{
+    text-align: center;
+    margin-top: 3%;
+    color: darkmagenta;
+    font-size: 4em;
+    font-family: "Architects Daughter", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.contenedor-galeria{
+    width: 900px;
+    height: 400px;
+    overflow: hidden;
+    margin: 50px auto;
+    box-shadow: 0 0 10px 1px rgba(147,112,216,0.35);
+}
+.contenedor-galeria li{
+    position: relative;/*que dependan del elemento padre*/
+    display: block;/*que tod sea considerad como un bloque*/
+    width: 200px;/*800px del contenedor dividido 5 imágenes*/
+    float: left;/*para el posicionamiento de izquierda a derecha*/
+    box-shadow: 0 0 25px 10px rgba(147,112,216,0.35);
+    transition: all 0.5s;/*que todos los elementos se muevan en 5 s*/
+}
+.contenedor-galeria ul:hover li{
+    width: 150px;/*800px-640px=160px / 4imagenes aplicando el hover*/
+    filter: brightness(50%);
+}
+.contenedor-galeria ul li:hover{
+    width: 600px;
+    filter: brightness(100%);
+}
+.contenedor-galeria li img{
+    display: block;
+    width: 600px;
+    height: 100%;
+}
+.titulo-imagen{
+    background: rgba(255,192,203,0.8);
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    display: block;
+    transition: all 0.5s ease;
+    background-size: 400% 400%;
+}
+@keyframes cambia-color{
+    0%{
+        background-position: 0%, 50%;
+    }
+    50%{
+        background-position: 100%, 50%;
+    }
+    100%{
+        background-position: 0%, 100%;
+    }
+}
+.titulo-imagen a{
+    display: block;
+    color: darkmagenta;
+    text-decoration: none;
+    text-align: center;
+    font-family: "Architects Daughter", cursive;
+    padding: 5%;
+    font-size: 1.7em;
+    text-shadow: 0 1px 2px rgba(147,112,216,0.35);
+    transition: all 0.5s ease;
+}
+.contenedor-galeria ul li:hover .titulo-imagen{
+    top: 0%;
+    box-shadow: 0 0 25px 10px rgba(147,112,216,0.35);
+}
+.titulo-imagen:hover a {
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+}
+.titulo-imagen:active{
+    background: rgba(147,112,216,0.35);
+}
+
+
+/*********************************************************************************************************************************/
+/*CURRICULUM*/
+.container{
+    font-family: "Architects Daughter", cursive;
+    text-align: center;
+    background-color:white;
+    width: 80%;
+    margin: auto;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+.container .cabecera {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: palevioletred;
+    padding: 30px 20px;
+    flex-wrap: wrap;
+}
+.container .cabecera .nombre-puesto h1,h2{
+    font-weight: normal;
+    text-align: right;
+}
+.container .cabecera .nombre-puesto h2{
+    font-size: 1.5em;
+    margin-top: 5px;
+    opacity: 0.5;
+}
+.container .cabecera .nombre-puesto h1{
+    font-size: 7em;
+    margin: 0;
+}
+.foto-perfil{
+    width: 380px;/*Ancho inicial del contenedor*/
+    height: 380px;/*Alto inicial del contenedor*/
+    border-radius: 50%;/*Borde circular*/
+    overflow: hidden;/*oculta la parte que sobresale de la imagen*/
+    margin: 3%;
+    margin-left: -3%;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+}
+.foto-perfil img{
+    width: 100%;/*la imagen ocupa el 100% del ancho del contenedor*/
+    height: auto;/*altura automática para mantener la proporción*/
+    display: block;/*La imahen se comprta como un bloque*/
+}
+.dato-ppal{
+    text-align: left;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 20%;
+}
+.contenido-cv{
+    display: flex;/*para queno se desplacen los elementos al insertar contenido*/
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px 20px;
+    justify-content: center;
+    margin-top: 40px;
+}
+.contenido-cv h3{
+    font-size: 1.5em;
+    margin-bottom: 1%;
+    text-align: left;
+}
+.contenido-cv h4{
+    margin-top: 5%;
+}
+.carta-presentacion{
+    margin-top: 10px;
+    text-align: justify;
+}
+.habilidades {
+    object-fit: cover;
+    display: inline-block;
+    justify-content: center;
+    vertical-align: top;
+    background-color: rgb(141, 193, 226);
+    margin-left: -4.6%;
+    padding:-5% 3%;
+    width: 35%;
+}
+.habilidades h3 {
+    text-align: left;
+    margin-bottom: 10px;
+    margin-top: 30px;
+    font-size: 1.5em;
+}
+.habilidades h4 {
+    text-align: left;
+    margin-bottom: 20px;
+    margin-top: 25px;
+    font-size: 1.2em;
+}
+.contenedor-habilidad {
+    display:flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.lista-habilidad {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+.lista-habilidad li {
+    margin-top: 8px;
+    display: flex;
+    margin-top:15px;
+    font-size: 1em;
+    text-align: left;
+}
+.lista-habilidad .icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    margin-top: -10px;
+}
+.lista-habilidad a{
+    text-decoration: none;
+    color: darkmagenta;
+    font-weight: 600;
+    margin-left: 10px;
+}
+.experiencia{
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    vertical-align: middle;
+    padding: 7% 0px 0px 70px;
+    width:60%;
+}
+.icono{
+    margin-bottom: -50px;
+    margin-right: -600px;
+}
+.encabezado h3{
+    margin-top: 9px;
+    text-align: right;
+}
+.experiencia h3{
+    margin-bottom: 12px;
+    text-align: left;
+}
+.cargo{
+    text-align: right;
+    margin-top: 18px;
+}
+.nombre-empresa{
+    margin-top: 0px;
+    vertical-align: top;
+    text-align: left;
+    width: 49%;
+}
+.descripcion-puesto{
+    margin-top: 1.5%;
+    text-align: left;
+}
+
+/****************************************************************************************************/
+/*MAS SOBRE MI*/
+.carta{
+    display: flex; /*para que la caja sea flexible para responsive*/
+    /*Propiedades para alinear y ajustar las cartas*/
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: -7%;
+    justify-content: center;
+    min-height: 100vh;
+    position: relative;
+    width: 100%;/*para que ocupe todo el ancho de la pantalla*/
+    justify-content: center;
+    align-items: center;
+    padding: 200px;
+}
+.texto-contenido{
+    text-align: center;
+    margin-bottom: 20px;
+    color: darkmagenta;
+    font-size: 5em;
+    font-family: "Architects Daughter", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.card{
+    font-size: 1em;
+    font-family: "Architects Daughter", cursive;
+    position: relative;
+    width: 400px;
+    height: 350px;
+    /*Fabricar margenes con el resto de cartas*/
+    margin: 20px;
+}
+.card .face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;/*determina si, cuando la carta gira, la cara 
+    posterior a a ser visible o no. Hidden: no es visible; Visible: Sí es visible*/
+    border-radius: 10px;
+    overflow: hidden; /*se le pone el mismo valor que a back-face*/
+    transition: 0.5s;/*para la transición del movimiento*/
+}
+.card .front{
+    transform: perspective(600px) rotateY(0deg);/*para el efecto del movimiento*/
+    box-shadow: 0px 5px 10px #000;
+}
+.card .front img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;/*indica cómo el contenido de un elemento es redimensionado 
+    para ajustarse al contenedor*/
+}
+.card .front h3{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;/*linea de cabecera*/
+    color: #fff;
+    background: rgb(100,149,237,0.7);
+    text-align: center;
+}
+.card .back{
+    transform: perspective(600px) rotateY(180deg);/*me lleva el texto a back*/
+    background: darkmagenta;
+    padding: 35px;
+    color: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0px 5px 10px #000;
+}
+.card .back .link{
+    border-top: 1px solid #f3f3f3;
+    height: 50px;
+    line-height: 50px;/*creo una línea para separalo de la info de arriba*/
+}
+.card .back .link a{
+    color: #f3f3f3;
+}
+.card .back h3{
+    font-size: 1em;
+    margin-top: 20px;
+    letter-spacing: 2px;/*para dar espacio entre las letras y no quede apelotonado*/
+}
+.card .back p{
+    letter-spacing: 1px;
+}
+.card:hover .front{
+    transform: perspective(600px) rotateY(180deg);
+}
+.card:hover .back{
+    transform: perspective(600px) rotateY(360deg);
+}
+
+/*********************************************************************************************/
+/*QUIEN SOY*/
+.contenedor-quienSoy h2{
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 33px;
+}
+.section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.contenedor-quienSoy{
+    font-family: "Architects Daughter", cursive;
+    text-align: left;
+    color: darkmagenta;
+    font-size: 1.2em;
+    margin: 2%;
+    margin-top: -5%;
+    display: inline-block;
+    vertical-align: top;
+    background-color: lightskyblue;
+    padding: 5%;
+    width: 45%;
+}
+.img-contenedor-quienSoy{
+    width: 100px;
+    max-width: 500px;
+    display: flex;
+    justify-content:center;
+    margin: 0 auto;
+    margin-bottom: 6%;
+    z-index: -5; 
+}
+.boxPaginaPpal2{
+    position: relative;
+    max-width: 16000px;
+    text-align: center;
+    margin-top: -5%;
+}
+.boxPaginaPpal2 a{
+    font-family: "Architects Daughter", cursive;
+    text-align: justify;
+    text-decoration: none;
+    text-transform: uppercase;   
+    color: darkmagenta;
+    background: white;
+    padding: 10px 10px;
+    margin: left 30px;
+    border-radius: 20px;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+.boxPaginaPpal2 a:hover{
+    color: white;
+    background: darkmagenta;
+    transition: 0.5s;
+}
+@media (max-width: 575px) {
+    .contenedor-quienSoy {
+        font-size: 16px;
+        text-align: justify;
+    }
+
+    .img-contenedor-quienSoy {
+        max-width: 90%;
+    }
+
+    .boxPaginaPpal a {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+}
